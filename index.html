@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>간단한 포트폴리오</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #111827;
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+        --accent: #38bdf8;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+        background: linear-gradient(180deg, #020617 0%, #111827 100%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .wrapper {
+        width: min(1120px, calc(100% - 2rem));
+        margin: 0 auto;
+        padding: 2rem 0 4rem;
+      }
+
+      header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .brand {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .brand strong {
+        font-size: 1.6rem;
+      }
+
+      .brand span {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-left: 1.5rem;
+        transition: color 0.2s ease;
+      }
+
+      nav a:hover {
+        color: var(--accent);
+      }
+
+      .hero {
+        padding: 2rem;
+        background: var(--card);
+        border-radius: 24px;
+        box-shadow: 0 20px 80px rgba(15, 23, 42, 0.35);
+        margin-bottom: 2rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        max-width: 720px;
+        color: var(--muted);
+      }
+
+      .section {
+        margin-bottom: 2rem;
+      }
+
+      .section h2 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .card-grid {
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid rgba(148, 163, 184, 0.08);
+        border-radius: 20px;
+        padding: 1.5rem;
+      }
+
+      .card strong {
+        display: block;
+        margin-bottom: 0.75rem;
+        font-size: 1.1rem;
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 0.75rem;
+      }
+
+      .skill-item {
+        background: rgba(56, 189, 248, 0.08);
+        color: var(--text);
+        border: 1px solid rgba(56, 189, 248, 0.2);
+        padding: 0.9rem 1rem;
+        border-radius: 14px;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .project-list {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .project-item {
+        background: rgba(148, 163, 184, 0.06);
+        border-radius: 18px;
+        padding: 1.25rem;
+      }
+
+      .project-item h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      .project-item p {
+        color: var(--muted);
+      }
+
+      .contact {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .contact a,
+      .contact span {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        color: var(--text);
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(148, 163, 184, 0.08);
+        padding: 1rem 1.2rem;
+        border-radius: 16px;
+      }
+
+      .footer {
+        text-align: center;
+        color: var(--muted);
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 720px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        nav a {
+          margin-left: 0;
+          margin-right: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="brand">
+          <strong>홍길동</strong>
+          <span>프론트엔드 개발자 / 포트폴리오</span>
+        </div>
+        <nav>
+          <a href="#about">소개</a>
+          <a href="#skills">기술</a>
+          <a href="#projects">프로젝트</a>
+          <a href="#contact">연락</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <h1>사용자에게 즐거운 경험을 만드는 웹 개발자입니다.</h1>
+        <p>
+          직관적인 UI, 반응형 디자인, 깔끔한 코드로 사용자 중심의 웹 서비스를
+          설계하고 구현합니다. JavaScript, Vue, React를 활용한
+          웹 프로젝트를 수행했습니다.
+        </p>
+      </section>
+
+      <section id="about" class="section">
+        <h2>소개</h2>
+        <div class="card">
+          <p>
+            안녕하세요! 저는 사용자 경험을 중요하게 생각하는 프론트엔드 개발자
+            홍길동입니다. 새롭고 효과적인 인터페이스를 만들기 위해 항상 배우고
+            실험합니다.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <h2>기술 스택</h2>
+        <div class="skills">
+          <span class="skill-item">HTML</span>
+          <span class="skill-item">CSS</span>
+          <span class="skill-item">JavaScript</span>
+          <span class="skill-item">Vue.js</span>
+          <span class="skill-item">React</span>
+          <span class="skill-item">Git</span>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <h2>주요 프로젝트</h2>
+        <div class="project-list">
+          <article class="project-item">
+            <h3>여행 검색 웹 앱</h3>
+            <p>
+              필터 기반 검색과 예약 기능을 갖춘 여행 정보 서비스. 반응형 UI와
+              모던 애니메이션을 적용했습니다.
+            </p>
+          </article>
+          <article class="project-item">
+            <h3>투두 리스트 관리</h3>
+            <p>
+              상태 관리와 로컬 저장소를 활용한 개인 일정 관리 앱. 사용자의 작업을
+              간편하게 추가/편집/완료할 수 있습니다.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>연락하기</h2>
+        <div class="contact">
+          <a href="mailto:example@email.com">이메일 보내기</a>
+          <span>전화: 010-1234-5678</span>
+        </div>
+      </section>
+
+      <footer class="footer">
+        © 2026 홍길동. 간단한 포트폴리오 페이지입니다.
+      </footer>
+    </div>
+  </body>
+</html>
